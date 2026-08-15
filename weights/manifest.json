@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "dataset": "Fluo-N2DH-SIM+",
+  "training_sequence": "01",
+  "evaluation_sequence": "02",
+  "seed": 17,
+  "metric_encoder": {
+    "path": "metric_encoder_all_params.pth",
+    "architecture": "ResNet-18",
+    "embedding_dimension": 128,
+    "sha256": "fc91c12ee7ea7b0859dfe9946fc9345748dab795663954240ed245aada6edce9"
+  },
+  "association_gnn": {
+    "path": "association_gnn/checkpoints/best.ckpt",
+    "input_mode": "embedding_motion_trackastra",
+    "message_passing_layers": 10,
+    "time_window": 10,
+    "selected_epoch": 61,
+    "sha256": "f7bed4a893ad4a85efec03d1672744c5ec32ae79221882d0b95679bf05a17d1b",
+    "checkpoint_scope": "model_state_and_hyperparameters"
+  },
+  "inference": {
+    "motion_scale": [78.0, 85.0],
+    "decision_threshold": 0.5,
+    "one_to_one_association": true,
+    "division_mode": "geometric",
+    "k_sister": 2.0
+  }
+}

@@ -1,0 +1,23 @@
+# Exact GNN defaults used by the released SIM+ checkpoint.
+defaults:
+  - trainer: default
+  - model: association
+  - datamodule: sim_plus
+  - callbacks: default
+  - logger: default
+
+seed: 17
+one_hot: true
+separate_models: true
+work_dir: ${hydra:runtime.cwd}
+data_dir: ${work_dir}/data/
+debug: false
+print_config: true
+disable_warnings: true
+
+hydra:
+  run:
+    dir: outputs/gnn/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  job:
+    env_set:
+      WANDB_START_METHOD: thread
