@@ -2,7 +2,7 @@
 
 Official repository for the paper:
 
-**Cell Tracking via Competition Topology-Aware Metric Learning and Geometry-Constrained Division Recovery**
+**Cell Tracking via Competition Topology-Aware Metric Learning and Geometry-Constrained Division Recovery**. Once the paper is accepted, we will make all training weights publicly available.
 
 ## Overview
 
